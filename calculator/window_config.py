@@ -1,4 +1,6 @@
 from tkinter import *
+import computation as comp
+import functions as funcs
 
 
 #Window Configurations
@@ -9,5 +11,5 @@ icon = PhotoImage(file = "../misc/logo.png")
 window.config(background = "#63666A")
 window.iconphoto(True, icon)
 
-label = Label()
+#Run the Window
 window.mainloop()
