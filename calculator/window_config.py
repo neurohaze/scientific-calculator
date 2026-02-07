@@ -8,7 +8,7 @@ def configure_window(root_window):
 	# height = int(round(screen_height*0.50, -1))
 	# root_window.geometry(f"{width}x{height}")
 
-	root_window.geometry("500x600")
+	root_window.geometry("500x730")
 	root_window.resizable(False, False)
 	
 	root_window.title("Scientific Calculator")

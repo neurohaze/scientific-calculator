@@ -70,27 +70,34 @@ def create_buttons(root_window, input_equation_var):
             # For digits
             else:
                 cmd = lambda val = label, ev= input_equation_var: append(val, ev)
+
+            btn_width = 5
                   
             if label in BUTTONS_GRAY: 
                 Button(
                     row_frame,
                     text=label, font = ("Arial", 16),
                     command=cmd, bg = "gray", fg = "white", activebackground = "darkgray", activeforeground = "white",
-                     relief = "raised", bd = 0, highlightthickness = 0
+                     relief = "raised", bd = 0, highlightthickness = 0, height = 2, width = btn_width
                     ).pack(side="left", padx=2, pady=2, fill = "both", expand = True, ipadx = 5, ipady = 10)
             elif label in BUTTONS_BLACK:
+                if label == "DEG/RAD":
+                    btn_width = 12
+
                 Button(
                     row_frame,
                     text=label,
                     font = ("Arial", 16), 
                     command=cmd, bg = "black", fg = "white", activebackground = "#333333", 
-                    activeforeground = "white", relief = "raised", bd = 0, highlightthickness = 0
+                    activeforeground = "white", relief = "raised", bd = 0, highlightthickness = 0, height = 2, width = btn_width
                     ).pack(side="left", padx=2, pady=2, fill = "both", expand = True, ipadx = 5, ipady = 10)
-            else: 
+            else:
+                if label == "=":
+                    btn_width = 12
                 Button(
                     row_frame,
                     text=label,
                     font = ("Arial", 16),
                     command=cmd, bg = "orange", fg = "white", 
-                    activebackground = "darkorange", activeforeground = "white", relief = "raised", bd = 0, highlightthickness = 0
+                    activebackground = "darkorange", activeforeground = "white", relief = "raised", bd = 0, highlightthickness = 0, height = 2, width = btn_width
                     ).pack(side="left", padx=2, pady=2, fill = "both", expand = True, ipadx = 5, ipady = 10)
